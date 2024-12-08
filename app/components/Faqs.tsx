@@ -10,12 +10,12 @@ const faqs = [
   {
     question: "How do you handle version control?",
     answer:
-      "Every change in Furrow is automatically saved and versioned in real-time. This ensures that you can always track your progress and revert to previous versions of your work if needed. With Furrow's version control system, you never have to worry about losing important changes, and you can collaborate seamlessly with your team.",
+      "Every change in Furrow&apos;s version control system is automatically saved and versioned in real-time. This ensures that you can always track your progress and revert to previous versions of your work if needed. With Furrow&apos;s version control system, you never have to worry about losing important changes, and you can collaborate seamlessly with your team.",
   },
   {
     question: "Can I work offline?",
     answer:
-      "Yes! Furrow includes a robust offline mode that allows you to continue your work even when you don't have an internet connection. All changes made offline are automatically synced when you're back online, ensuring that you never lose any progress, no matter where you are.",
+      "Yes! Furrow includes a robust offline mode that allows you to continue your work even when you don&apos;t have an internet connection. All changes made offline are automatically synced when you&apos;re back online, ensuring that you never lose any progress, no matter where you are.",
   },
   {
     question: "How does Furrow handle collaboration?",
@@ -30,7 +30,7 @@ const faqs = [
 ];
 
 export default function Faqs() {
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null); // Use `null` to handle unselected states
 
   return (
     <section id="faqs" className="py-24 scroll-mt-20">
@@ -40,8 +40,9 @@ export default function Faqs() {
         </div>
 
         <h2 className="text-6xl font-medium mt-6 text-center max-w-xl mx-auto">
-          Questions? We've got <span className="text-teal-400">answers</span>
+          Questions? We&apos;ve got <span className="text-teal-400">answers</span>
         </h2>
+
         <div className="mt-12 flex flex-col gap-6 max-w-xl mx-auto cursor-pointer">
           {faqs.map((faq, faqIndex) => (
             <div
@@ -50,33 +51,27 @@ export default function Faqs() {
             >
               <div
                 className="flex justify-between items-center"
-                onClick={() => setSelectedIndex(faqIndex)}
+                onClick={() => setSelectedIndex(faqIndex === selectedIndex ? null : faqIndex)} // Toggle open/close
+                aria-expanded={selectedIndex === faqIndex} // Accessibility improvement
               >
-                <h3 className="font-medium">{faq.question}</h3>
+                <h3 className="font-medium text-white">{faq.question}</h3>
                 <Plus
                   className={twMerge(
-                    "text-teal-400 shrink-0 transition",
+                    "text-teal-400 shrink-0 transition-transform", 
                     selectedIndex === faqIndex && "rotate-45"
                   )}
                 />
               </div>
-              
+
               <AnimatePresence>
                 {selectedIndex === faqIndex && (
                   <motion.div
-                    initial={{
-                      height: 0,
-                      marginTop: 0,
-                    }} 
-                    animate={{
-                      height: "auto",
-                      marginTop: 24,
-                    }}
-                    exit={{
-                      height: 0,
-                      marginTop: 0,
-                    }}
-                    className={twMerge("overflow-hidden")}>
+                    initial={{ height: 0, marginTop: 0 }}
+                    animate={{ height: "auto", marginTop: 24 }}
+                    exit={{ height: 0, marginTop: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
                     <p className="text-white/50">{faq.answer}</p>
                   </motion.div>
                 )}
