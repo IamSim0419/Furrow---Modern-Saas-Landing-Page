@@ -27,7 +27,7 @@ export default function Introduction() {
   return (
     <section className="py-28 px-4 lg:py-40">
       <div className="container mx-auto">
-        <div className="sticky top-28">
+        <div className="sticky top-20 md:top-28">
           <div className="flex justify-center">
             <Tag>Introducing Furrow</Tag>
           </div>
