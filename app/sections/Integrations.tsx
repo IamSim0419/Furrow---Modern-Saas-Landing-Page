@@ -1,10 +1,10 @@
 import Tag from "@/app/components/Tag";
-import figmaIcon from "@/assets/images/figma-logo.svg";
-import NotionIcon from "@/assets/images/notion-logo.svg";
-import slackIcon from "@/assets/images/slack-logo.svg";
-import relumeIcon from "@/assets/images/relume-logo.svg";
-import framerIcon from "@/assets/images/framer-logo.svg";
-import githubIcon from "@/assets/images/github-logo.svg";
+import figmaIcon from "@/public/assets/images/figma-logo.svg";
+import NotionIcon from "@/public/assets/images/notion-logo.svg";
+import slackIcon from "@/public/assets/images/slack-logo.svg";
+import relumeIcon from "@/public/assets/images/relume-logo.svg";
+import framerIcon from "@/public/assets/images/framer-logo.svg";
+import githubIcon from "@/public/assets/images/github-logo.svg";
 
 import IntegrationsColumn from "@/app/components/IntegrationsColumn";
 

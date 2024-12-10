@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import logoImage from "@/assets/images/logo.png";
+import logoImage from "@/public/assets/images/logo.png";
 import Link from "next/link";
-import MobileMenu from "./MobileMenu";
+import MobileMenu from "@/app/components/MobileMenu";
 import { useState } from "react";
-import Button from "../../components/ui/Button";
+import Button from "@/components/ui/Button";
 import { AnimatePresence, motion } from "motion/react";
+import { twMerge } from "tailwind-merge";
 
 const navLinks = [
   { label: "Home", href: "#" },
@@ -17,9 +18,10 @@ const navLinks = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const isSticky = true;
 
   return (
-    <header className="absolute top-0 z-50 w-full ">
+    <header className={twMerge("absolute z-50 w-full", isSticky === true && "top-0 fixed")}>
       <div className="container max-w-5xl mx-auto p-4">
         <div className="border border-white/15 rounded-[27px] md:rounded-full bg-neutral-950/70 backdrop-blur">
           <div className="grid grid-cols-2 lg:grid-cols-3 items-center  p-2 px-4 md:pr-2 ">

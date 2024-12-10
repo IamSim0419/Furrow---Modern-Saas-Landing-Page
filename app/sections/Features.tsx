@@ -1,12 +1,13 @@
 import FeatureCard from "@/app/components/FeatureCard";
 import Tag from "@/app/components/Tag";
 import Image from "next/image";
+import Avatar from "@/app/components/Avatar";
 
-import avatar1 from "@/assets/images/avatar-owen-garcia.jpg";
-import avatar2 from "@/assets/images/avatar-florence-shaw.jpg";
-import avatar3 from "@/assets/images/avatar-lula-meyers.jpg";
-import avatar4 from "@/assets/images/avatar-ashwin-santiago.jpg";
-import Avatar from "./Avatar";
+import avatar1 from "@/public/assets/images/avatar-owen-garcia.jpg";
+import avatar2 from "@/public/assets/images/avatar-florence-shaw.jpg";
+import avatar3 from "@/public/assets/images/avatar-lula-meyers.jpg";
+import avatar4 from "@/public/assets/images/avatar-ashwin-santiago.jpg";
+
 import Key from "@/app/components/Key";
 
 const features = [

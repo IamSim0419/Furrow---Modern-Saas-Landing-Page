@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { type IntegrationsType } from "@/app/components/Integrations";
+import { type IntegrationsType } from "@/app/sections/Integrations";
 import { twMerge } from "tailwind-merge";
 import { motion } from "motion/react";
 import { Fragment } from "react";

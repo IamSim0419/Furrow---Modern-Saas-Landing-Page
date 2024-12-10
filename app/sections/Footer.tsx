@@ -1,4 +1,4 @@
-import LogoImage from "@/assets/images/logo.png"
+import LogoImage from "@/public/assets/images/logo.png"
 import Image from "next/image"
 import Link from "next/link"
 

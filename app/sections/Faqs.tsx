@@ -1,7 +1,7 @@
 "use client";
 
 import { Plus } from "lucide-react";
-import Tag from "./Tag";
+import Tag from "@/app/components/Tag";
 import { twMerge } from "tailwind-merge";
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";

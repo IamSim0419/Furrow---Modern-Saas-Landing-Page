@@ -1,13 +1,13 @@
 "use client";
 
-import quantumLogo from "@/assets/images/quantum.svg";
-import acmeLogo from "@/assets/images/acme-corp.svg";
-import echoValleyLogo from "@/assets/images/echo-valley.svg";
-import pulseLogo from "@/assets/images/pulse.svg";
-import outsideLogo from "@/assets/images/outside.svg";
-import apexLogo from "@/assets/images/apex.svg";
-import celestailLogo from "@/assets/images/celestial.svg";
-import twiceLogo from "@/assets/images/twice.svg";
+import quantumLogo from "@/public/assets/images/quantum.svg";
+import acmeLogo from "@/public/assets/images/acme-corp.svg";
+import echoValleyLogo from "@/public/assets/images/echo-valley.svg";
+import pulseLogo from "@/public/assets/images/pulse.svg";
+import outsideLogo from "@/public/assets/images/outside.svg";
+import apexLogo from "@/public/assets/images/apex.svg";
+import celestailLogo from "@/public/assets/images/celestial.svg";
+import twiceLogo from "@/public/assets/images/twice.svg";
 
 import Image from "next/image";
 import { Fragment } from "react";
