@@ -21,7 +21,12 @@ export default function Navbar() {
   const isSticky = true;
 
   return (
-    <header className={twMerge("absolute z-50 w-full", isSticky === true && "top-0 fixed")}>
+    <header
+      className={twMerge(
+        "absolute z-50 w-full",
+        isSticky === true && "top-0 fixed"
+      )}
+    >
       <div className="container max-w-5xl mx-auto p-4">
         <div className="border border-white/15 rounded-[27px] md:rounded-full bg-neutral-950/70 backdrop-blur">
           <div className="grid grid-cols-2 lg:grid-cols-3 items-center  p-2 px-4 md:pr-2 ">
@@ -35,7 +40,7 @@ export default function Navbar() {
               />
             </Link>
 
-            <nav className="lg:flex justify-center items-center hidden">
+            <nav className="lg:flex justify-center items-center hidden ">
               <div className="flex gap-6 font-medium">
                 {navLinks.map((link) => (
                   <a href={link.href} key={link.label}>
@@ -58,7 +63,11 @@ export default function Navbar() {
               >
                 <div className="flex flex-col items-center justify-center gap-4 py-6">
                   {navLinks.map((link) => (
-                    <a href={link.href} key={link.label} className="py-2">
+                    <a
+                      href={link.href}
+                      key={link.label}
+                      className="py-2 text-xl font-semibold"
+                    >
                       {link.label}
                     </a>
                   ))}

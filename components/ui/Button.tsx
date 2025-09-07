@@ -8,7 +8,7 @@ type ButtonProps = {
 const classes = cva("border h-12 rounded-full px-6 font-medium", {
   variants: {
     variant: {
-      primary: "border-teal-400 bg-teal-400 text-neutral-950",
+      primary: "border-teal-100 bg-teal-400 text-neutral-950",
       secondary: "border-white text-white bg-transparent",
     },
     size: {

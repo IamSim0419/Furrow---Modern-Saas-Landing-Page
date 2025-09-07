@@ -28,7 +28,7 @@ export default function IntegrationsColumn({
       transition={{
         duration: 15,
         repeat: Infinity,
-        ease: "linear"
+        ease: "linear",
       }}
       className={twMerge("flex flex-col gap-4 pb-4", className)}
     >
